@@ -1,0 +1,36 @@
+package Aplicacoes;
+import java.util.Scanner;
+
+/*Construa um mini-game com dados:
+O jogador e a máquina iniciam com 05 de HP( pontos de vida)
+Jogador e máquina utilizarão um sistema de dados de sorte;
+Os dois lançarão sorte, e o os valores dos dados deverão ser comparados;
+Caso o jogador tire um valor maior que a máquina, deve ser descontado 01 ponto de vida da máquina. Caso  a máquina tire um valor acima do jogador, o jogador deve receber o desconto de 01 ponto em seu HP.
+O último a permanecer com pontos de vida, deve ser o ganhador;
+Caso haja empate, nenhum dos dois perderão pontos;
+Devem ser apresentados cada valor dos dados tirados entre a máquina e o computador;
+Devem aparecer mensagens de vitória, empate, derrota, desconto de pontos (JOPTIONPANE)
+Deve ser registrado no banco de dados cada rodada para consulta, com os valores da máquina e jogador.
+O Bot/máquina e jogador devem possuir classes próprias, e chamadas dentro do MAIN.*/
+
+public class App {
+	
+	
+	public static void main(String[] args) {
+		acoes girar = new acoes();
+		
+		Scanner sc = new Scanner (System.in);	
+		System.out.println("Digite o nome do jogador: ");
+		String nomeJogador = sc.nextLine();		
+		System.out.println (nomeJogador);
+		
+		girar.girarDados();
+		
+		
+				
+		
+		
+	
+	}
+	
+}

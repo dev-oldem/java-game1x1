@@ -1,0 +1,42 @@
+package Aplicacoes;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class JPanel extends JFrame {
+	
+	
+	public static void telaHome () {
+		acoes girar = new acoes();
+		
+		String titulo = "JOGO DOS DADOS - Bot vs Jogador";
+		String bot = "BOT";
+		String nomeJogador;
+	    JPanel panel = new JPanel();
+	    JLabel label = new JLabel(titulo, SwingConstants.CENTER);
+	    label.setFont(new Font("Arial", Font.BOLD, 12));
+	    panel.setTitle("Início");
+	    panel.setSize(1400,800);	    
+	    panel.setLocationRelativeTo(null);
+	    panel.setVisible(true);
+	    panel.add(label, BorderLayout.PAGE_START);
+	    JButton botaoGirarDados = new JButton("GIRAR");
+	    botaoGirarDados.setBounds(650,700,100,50);
+	    
+	    
+	    botaoGirarDados.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Insert code here
+            	girar.girarDados();
+            }
+        });
+	    panel.add(botaoGirarDados);
+	}
+	public static void main(String[] args) {
+		
+		
+		telaHome ();
+	}
+}

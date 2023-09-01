@@ -1,0 +1,57 @@
+package Aplicacoes;
+
+public class acoes {
+	
+public static void girarDados() {
+	int run = 1;
+	int dadoBot, dadoJogador1;
+	int vidaBot = 5;
+	int vidaJogador1 = 5;
+			
+    while (run == 1) {   
+    	dadoBot = (int) (Math.random()*6);
+    	System.out.println("Resultado Dado Bot: "+(dadoBot + 1));      
+    
+    	dadoJogador1 = (int) (Math.random()*6);
+    	System.out.println("Resultado Dado Jogador 1: "+(dadoJogador1 + 1)); 
+    
+    	if (dadoBot > dadoJogador1) {
+    		System.out.println ("Bot ganhou!!");
+    		vidaJogador1 = vidaJogador1 - 1;
+    	        	
+    	}
+    	else if (dadoJogador1 > dadoBot) {
+    		System.out.println ("Jogador 1 ganhou!!");
+    		vidaBot = vidaBot - 1;
+    	}
+    	else
+    		System.out.println ("Empatou...");
+    		System.out.println ("Vida do Jogador 1: " + vidaJogador1);
+    		System.out.println ("Vida do Bot: " + vidaBot);
+    
+	
+    	if (vidaBot == 0) {
+    		System.out.println ("Jogador 1 VENCEU a partida!!");
+    		run = 0;
+    	}
+    	
+    	if (vidaJogador1 == 0) {
+    		System.out.println ("Bot VENCEU a partida!!"); 
+    		run = 0;
+    	}
+    
+    }
+}
+
+public static void gravarBanco (){
+
+}
+
+
+}
+	   
+	    
+			
+
+
+
